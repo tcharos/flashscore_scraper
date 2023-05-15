@@ -5,6 +5,7 @@ class FlashscorehistoricityspiderSpider(scrapy.Spider):
     name = "flashscoreHistoricitySpider"
     allowed_domains = ["www.flashscore.com"]
     start_urls = ["https://www.flashscore.com/"]
+
     global base_url
     base_url = "https://www.flashscore.com"
 
@@ -30,9 +31,8 @@ class FlashscorehistoricityspiderSpider(scrapy.Spider):
     def parse(self, response):
         #page = response.meta["playwright_page"]
         #await page.close()
-
-        # TODO 
-        # click on "Show more" to load all countries
+        
+        # TODO - click on "Show more" to load all countries
         
         # construct country links
         for i in response.xpath('//div[@class = "lmc__block "]/a'):
@@ -71,18 +71,22 @@ class FlashscorehistoricityspiderSpider(scrapy.Spider):
         league = response.meta.get('league')
 
         for k in response.xpath('//div[@class = "archive__row"]'):
-            #print("--------------------------")
-            #print(k.xpath('div[@class="archive__season"]/a/@href').get())
-            spec_archived_competition = base_url + k.xpath('div[@class="archive__season"]/a/@href').get()
-            #print(spec_archived_competition)
-            yield{'country': cn,
+            if any(map((k.xpath('div[@class="archive__season"]/a/@href').get()).__contains__, 
+                       ('2015','2016','2017','2018','2019','2020','2021','2022','2023'))):
+                spec_archived_competition = base_url + k.xpath('div[@class="archive__season"]/a/@href').get()
+                yield{'country': cn,
                   'league': league,
                   'hist_url': spec_archived_competition}
-
+            
+    
     # function to parse each archived competition
     def parse_archived_competition(self, response):
-        # TODO
-        # click on "Show more matches" link to load all matches
+        hist_url = response.meta.get('hist_url')
+        cn = response.meta.get('country')
+        league = response.meta.get('league')
+
+        # TODO - click on "Show more matches" link to load all matches
+        # TODO - correct url is spec_archived_competition + results/
         pass
     
     

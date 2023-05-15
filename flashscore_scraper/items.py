@@ -9,4 +9,6 @@ import scrapy
 class FlashscoreScraperItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    # TODO - create the scrapy item
+    # Fields: Country|League etc
     pass
