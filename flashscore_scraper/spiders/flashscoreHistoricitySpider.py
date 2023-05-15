@@ -1,5 +1,4 @@
 import scrapy
-from scrapy_selenium import SeleniumRequest
 
 
 class FlashscorehistoricityspiderSpider(scrapy.Spider):
@@ -19,14 +18,14 @@ class FlashscorehistoricityspiderSpider(scrapy.Spider):
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
             "X-Requested-With": "Fetch",
         }
-        yield scrapy.Request(url, headers=headers)
+        yield scrapy.Request(url, meta={'playwright':True})
 
     def parse(self, response):
         # get Country links e.g. /football/albania/
         for i in response.xpath('//div[@class = "left_menu_categories_seo"]'):
             countries_paths_list = i.xpath('a/@href').extract()
-            print(countries_paths_list)
-            countries_links_final = ["https://www.flashscore.com"+ls for ls in countries_paths_list]
+            #print(countries_paths_list)
+            countries_links_final = ["https://www.flashscore.com" + ls for ls in countries_paths_list]
             print(countries_links_final)
 
         # get league
