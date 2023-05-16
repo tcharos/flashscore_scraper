@@ -100,6 +100,8 @@ DOWNLOAD_HANDLERS = {
     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
 }
 
+LOG_LEVEL = "INFO"
+
 FEEDS = {
     'data.csv': {'format': 'csv', 'encoding': 'utf8', 'overwrite': True}
 }
