@@ -91,7 +91,7 @@ class FlashscorehistoricityspiderSpider(scrapy.Spider):
         print('--------------------------------')
 
         page = response.meta['playwright_page']
-        #page.set_default_timeout(0)
+        page.set_default_timeout(1000)
         #print(page)
 
         #hist_url = response.meta.get('hist_url')
@@ -100,38 +100,31 @@ class FlashscorehistoricityspiderSpider(scrapy.Spider):
         url = response.meta.get('url')
 
         # TODO - click on "Show more matches" link to load all matches (e.g. https://www.flashscore.com/football/albania/superliga-2019-2020/results/)
-        # try:
-        #    while button := page.locator("//a[contains(@class,'event__more--static')]"):
-        #        await button.scroll_into_view_if_needed()
-        #        await button.click()
-        #        print('------- button clicked ??? -------')
-        # except:
-        #    pass
+        try:
+            while button := page.locator("//div[contains(@class,'sportName')]/a"):
+                await button.scroll_into_view_if_needed()
+                await button.click()
+                print('------- button clicked ??? -------')
+        except:
+            pass
 
-        # content = await page.content()
-        # sel = Selector(text=content)
+        #content = await page.content()
+        #sel = Selector(text=content)
 
         show_more_exists_tmp = response.xpath("//a[contains(@class,'event__more--static')]")
-
+        print("---------- we have the full page ??? --------")
         if (show_more_exists_tmp == []):
             print("------------------ Show more matches url NOT found ------------------")
             # print(response.xpath('//a[@class="event__more.event__more--static"]'))
             # yield scrapy.Request(url = self.parse_archived_competition,callback = self.parse_archived_competition,meta = {'country': cn,'league': league})
         else:
             print("------------------ Show more matches url found ------------------")
-            try:
-                while button := page.locator("//a[contains(@class,'event__more--static')]"):
-                    await button.scroll_into_view_if_needed()
-                    await button.click()
-                    print('------- button clicked ??? -------')
-            except:
-                pass
             # print(response.xpath('//a[@class="event__more event__more--static"]/@href').get())
 
         # TODO - correct url is spec_archived_competition + results/
 
         # TODO - callback for each match
-        pass
+        #pass
 
     # function to parse each match
 
