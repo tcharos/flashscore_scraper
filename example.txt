@@ -15,11 +15,14 @@ Match Window (Opens in NEW Window)
 	ODDS tab
 	
 		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/1x2-odds/full-time
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/1x2-odds/1st-half
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/1x2-odds/2nd-half
 		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/over-under/full-time
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/over-under/1st-half
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/over-under/2nd-half
 		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/double-chance/full-time
 		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/ht-ft/full-time
 		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/both-teams-to-score/full-time
-
 
 	STANDINGS tab
 		
