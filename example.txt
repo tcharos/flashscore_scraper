@@ -1,0 +1,57 @@
+
+
+EXAMPLE
+
+	West Ham - Brighton
+
+Matches List
+
+	id="g_1_CAMUaTAR"	
+
+Match Window (Opens in NEW Window)
+
+	https://www.flashscore.com/match/CAMUaTAR/#/match-summary
+	
+	ODDS tab
+	
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/1x2-odds/full-time
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/over-under/full-time
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/double-chance/full-time
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/ht-ft/full-time
+		https://www.flashscore.com/match/CAMUaTAR/#/odds-comparison/both-teams-to-score/full-time
+
+
+	STANDINGS tab
+		
+		Standings Table		
+		
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/table/overall		
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/table/home
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/table/away
+		
+		
+		Form - Last x Matches (/10 for last 10 matches)
+		
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/form/overall/5
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/form/overall/10	
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/form/home/5
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/form/home/10
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/form/away/5
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/form/away/10
+		
+		
+		Over/Under
+		
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/over_under/overall/2.5
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/over_under/home/2.5
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/over_under/away/2.5
+		
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/over_under/overall/1.5
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/over_under/home/1.5
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/over_under/away/1.5
+		
+		
+		Top Scorers
+		
+		https://www.flashscore.com/match/CAMUaTAR/#/standings/top_scorers
+
